@@ -5,7 +5,143 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Button Moves Away from Mouse</title>
 <!-- 引入外部 CSS 文件 -->
+<style>
+    /* styles.css */
 
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+.all {
+    width: 100%;
+    height: 100vh;
+    background-color: #f0dae4;
+    display: flex;          
+    justify-content: center; /* 株洲居中 */
+    align-items: center;     /* 侧轴居中 */
+    flex-direction: column; /* 主轴方向：垂直 */
+}
+h3{
+    font-size: 200%;
+    color: rgb(114, 85, 21);
+}
+.noc {
+    width: 60%;
+    height: 150%;
+    font-size: large;
+}
+
+.no {
+    padding: 10px 20px;
+    background-color: #8695c8;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: left 0.3s, top 0.3s; /* 平滑移动 */
+    font-size: 20px;
+}
+.yes { 
+    padding: 10px 20px;
+    background-color: #cd95ab;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.anniu{
+    position: relative;
+    display: flex;
+    width: 250px;
+    justify-content: space-between; 
+    align-items: center;
+}
+
+/* 动态生成的动画将通过 JavaScript 添加 */
+.random-move {
+    animation: flyAway 2s forwards; /* 加快速度 */
+}
+img{
+    width: 240px;
+    height: 240px;
+}
+@keyframes flyAway {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        
+    }
+}
+
+/* styles.css */
+@media screen and (max-width: 768px) {
+    body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+    }
+    .all {
+        width: 100%;
+        height: 100vh;
+        background-color: #f0dae4;
+        display: flex;          
+        justify-content: center; /* 株洲居中 */
+        align-items: center;     /* 侧轴居中 */
+        flex-direction: column; /* 主轴方向：垂直 */
+    }
+    h3{
+        font-size: 150%;
+        color: rgb(114, 85, 21);
+    }
+    .noc {
+        width: 60%;
+        height: 150%;
+        font-size: large;
+    }
+    
+    .no {
+        padding: 10px 20px;
+        background-color: #8695c8;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: left 0.3s, top 0.3s; /* 平滑移动 */
+        font-size: 20px;
+    }
+    .yes { 
+        padding: 10px 20px;
+        background-color: #cd95ab;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 20px;
+    }
+    
+    .anniu{
+        position: relative;
+        display: flex;
+        width: 250px;
+        justify-content: space-between; 
+        align-items: center;
+    }
+    
+    /* 动态生成的动画将通过 JavaScript 添加 */
+    .random-move {
+        animation: flyAway 2s forwards; /* 加快速度 */
+    }
+    img{
+        width: 200px;
+        height: 200px;
+    }
+    }
+    
+</style>
 </head>
 <body>
 <div class="all" >
@@ -81,7 +217,6 @@
                     this.getm.push(`${i * 10}% { transform: translate(${randomX}px, ${randomY}px); }`)
                 }
             };
-            console.log('1'+this.getm)
             this.addAnimation();
         },
         addAnimation() {
@@ -92,83 +227,10 @@
                 }
             `;
             document.head.appendChild(style);
-            console.log(style.innerHTML)
         }
     }
 })
 </script>
-<style>
-    /* styles.css */
-body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-}
-.all {
-    width: 100%;
-    height: 100vh;
-    background-color: #f0dae4;
-    display: flex;          
-    justify-content: center; /* 株洲居中 */
-    align-items: center;     /* 侧轴居中 */
-    flex-direction: column; /* 主轴方向：垂直 */
-}
-h3{
-    font-size: 200%;
-    color: rgb(114, 85, 21);
-}
-.noc {
-    width: 60%;
-    height: 150%;
-    font-size: large;
-}
 
-.no {
-    padding: 10px 20px;
-    background-color: #8695c8;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: left 0.3s, top 0.3s; /* 平滑移动 */
-    font-size: 20px;
-}
-.yes { 
-    padding: 10px 20px;
-    background-color: #cd95ab;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 20px;
-}
-
-.anniu{
-    position: relative;
-    display: flex;
-    width: 250px;
-    justify-content: space-between; 
-    align-items: center;
-}
-
-/* 动态生成的动画将通过 JavaScript 添加 */
-.random-move {
-    animation: flyAway 2s forwards; /* 加快速度 */
-}
-img{
-    width: 240px;
-    height: 240px;
-}
-
-@keyframes flyAway {
-    0% {
-        transform: translate(0, 0);
-    }
-    100% {
-        
-    }
-}
-
-</style>
 </body>
 </html>
