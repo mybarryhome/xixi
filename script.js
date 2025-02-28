@@ -3,11 +3,14 @@ const app = new Vue({
     data() {
         return {
             photo:{
-                "smile":"https://free4.yunpng.top/2025/02/22/67b994fbcb14c.gif",
-                "sid":"https://free4.yunpng.top/2025/02/22/67b994fd5a612.gif",
+                //"smile":"https://free4.yunpng.top/2025/02/22/67b994fbcb14c.gif",
+                //"sid":"https://free4.yunpng.top/2025/02/22/67b994fd5a612.gif",
+                "smile" :"./img/期待.png",
+                "sid":"./img/哭泣.png",
                 "happy":"./img/好耶.png"
             },
-            url : "https://free4.yunpng.top/2025/02/22/67b994fbcb14c.gif",
+            //url : "https://free4.yunpng.top/2025/02/22/67b994fbcb14c.gif",
+            url : "./img/期待.png",
             num : 0 , // 点击次数,
             notext:["不要","不要","点错了？","Big胆！","追不上吧"],
             isFlying: false,
