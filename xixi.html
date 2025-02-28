@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Button Moves Away from Mouse</title>
+<!-- 引入外部 CSS 文件 -->
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="all" >
+    <img :src="url" alt="">
+    <h3>{{teex}}</h3>
+    
+    <div class="anniu" v-if = "num == 1 || num == 2">
+        
+        <button :class="{ 'yes': 1 ,'noc' : num == 2}"  @click="damie()" >{{ notext[num] }}</button>
+        <button class="no"  @click = "ok()">可以</button>
+    
+</div>
+    <div class="anniu" v-show = "num == 0 || num > 2">
+    
+        <button class="yes" @click = "ok()">可以</button>
+        <button class="no" :class="{'random-move': isFlying, }" @click="damie()">{{ notext[num] }}</button>
+</div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
